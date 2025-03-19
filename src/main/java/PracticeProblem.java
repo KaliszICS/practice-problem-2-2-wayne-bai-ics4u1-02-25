@@ -1,7 +1,7 @@
 public class PracticeProblem {
 
 	public static void main(String args[]) {
-		
+		System.out.println(binary_find(new int[] {1, 2, 3, 4, 5, 6, 67, 8, 9, 230, 555, 786, 923, 1000, 1500}, 230));
 	}
 
 	public static int sequence_find(int[] array, int num) {
@@ -22,11 +22,11 @@ public class PracticeProblem {
 			int mid = (high + low) / 2;
 			
 			searchCount += 1;
-
+			
 			if (array[mid] > num) {
-				low = mid + 1;
-			} else if (array[mid] < num) {
 				high = mid - 1;
+			} else if (array[mid] < num) {
+				low = mid + 1;
 			} else {
 				// return mid;
 				return searchCount;
