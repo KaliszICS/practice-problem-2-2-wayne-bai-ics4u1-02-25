@@ -1,4 +1,6 @@
 
+import java.util.Arrays;
+
 class Notes {
 	public static void main(String[] args) {
 		//Binary Search
@@ -22,7 +24,7 @@ class Notes {
 
 		while(low <= high) {
 
-			mid = (high + low) / 2;
+			mid = (high + low) / 2; //Do not forget the brackets
 
 			if (num == numArray[mid]) {
 				index = mid;	
@@ -38,53 +40,5 @@ class Notes {
 
 		System.out.println(index); //Does not guarentee the first/last or any other occurance of an element.  Just gives the first one it finds.
 
-
-
-
-
-
-		
-		// //Index values of low, high and mid
-		// int low = 0; //first index of the array
-		// int high = numArray.length - 1; //last element of the array index
-		// int mid = (low + high) / 2;
-
-		// //Sorts the array
-		// Arrays.sort(numArray);
-
-		// for (int i = 0; i < numArray.length; i++) {
-		// 	System.out.print(numArray[i] + " ");
-		// }
-		// System.out.println();
-		// //Start binary searching
-		// while (high >= low) { //continues searching until we run out of elements to search
-
-		// 	//Have we found the number
-		// 	if (numArray[mid] == num) {
-		// 		index = mid;
-		// 		//make the condition for the while loop false
-		// 		low = high + 1;
-		// 	}
-
-		// 	//less than
-		// 	else if (numArray[mid] < num){
-		// 		low = mid + 1;
-		// 		// mid = (low + high) / 2;
-		// 	}
-			
-		// 	//greater than
-		// 	// else if (numArray[mid] > num){
-				
-		// 	// }
-		// 	else {
-		// 		high = mid - 1;
-		// 		// mid = (low + high) / 2;
-		// 	}
-
-		// 	//Can be written outside if statements to get rid of repeated code.
-		// 	mid = (low + high) / 2;
-		// }
-
-		// System.out.println(index);
 	}
 }
